@@ -23,28 +23,60 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers*/
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+    }
+
+/*=========================================================*/
+
+.navAndHeader{
+    display:flex;
+    padding:2% 0 1% 0;  
+}
+
+.navAndHeader img{
+    margin: 0 0 0 11%;
+    width:15%;
+    animation: fadeInAnimation ease 4.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.navAndHeader nav{
+    width:70%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin:0 10% 0 0;
+}
+.header a{
+    padding:1.5%;
+    text-decoration: none;
+    color:black;
+}
+.header a:hover{
+    background:black;
+    color:white;
+}
+
+.picture{
+    width:80%;
+    margin:1% 10%;
+}
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	line-height: 100%;
 }
 
 * {
@@ -57,8 +89,8 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size:1.2rem;
+    margin-bottom: 5%;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -67,26 +99,27 @@ p {
 }
 
 .container {
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
+    flex-direction:row;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
+    padding: 1% 1% 0 1%;
+    padding-bottom: 3%;  
 }
 
 .middle-content {
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     border-bottom: 1px dashed black;
 }
 
@@ -101,10 +134,10 @@ p {
     justify-content: space-evenly;
 }
 
-.middle-content .boxes .box {
+.middle-content .boxes .box1 {
     width: 12.5%;
-    height: 100px;
-    background: black;
+    height:100px;
+    background: teal;
     margin: 20px 2.5%;
     color: white;
     display: flex;
@@ -112,6 +145,96 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box2 {
+    width: 12.5%;
+    height: 100px;
+    background: gold;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box3 {
+    width: 12.5%;
+    height: 100px;
+    background: cadetblue;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box4 {
+    width: 12.5%;
+    height: 100px;
+    background: coral;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box5 {
+    width: 12.5%;
+    height: 100px;
+    background: crimson;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box6 {
+    width: 12.5%;
+    height: 100px;
+    background: forestgreen;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box7 {
+    width: 12.5%;
+    height: 100px;
+    background: darkorchid;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box8 {
+    width: 12.5%;
+    height: 100px;
+    background: hotpink;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box9 {
+    width: 12.5%;
+    height: 100px;
+    background: indigo;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .box10 {
+    width: 12.5%;
+    height: 100px;
+    background:dodgerblue;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -139,8 +262,61 @@ footer nav {
     padding: 20px 2%;
     font-size: 14px;
 }
-
 footer nav a {
+    padding:3%;
     color: white;
     text-decoration: none;
+}
+footer nav a:hover{
+    background:white;
+    color:black;
+}
+
+/*----------- ABOUT PAGE --------*/
+.blocks {
+    display:flex;
+    flex-wrap: wrap;
+    border-top: 1px dashed black;
+    margin: 3%;
+}
+
+button {
+    background-color: white;
+    border-radius:5px;
+    padding: 2%;
+    width:30%;
+    margin:2% 0%;
+}
+
+.strategy {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin:3%;
+}
+
+.how {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin:3%;
+}
+
+.places {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin:3%;
+}
+
+.collab {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin:3%;
+}
+
+.work {
+    border-top: 1px dashed black;
+    padding: 5%;
 }
